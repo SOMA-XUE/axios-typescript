@@ -5,4 +5,8 @@ export interface AxiosRequestConfig {
     params: any;
     headers?: Record<string, any>;
     data?: Record<string, any>
+} 
+
+export interface AxiosResponse<T> {
+    
 }
