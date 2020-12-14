@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, {AxiosResponse} from 'axios';
 
 const baseUrl = 'http://localhost:8080';
 interface User {
@@ -15,4 +15,8 @@ axios({
     method:'get',
     url: baseUrl + '/get',
     params: user,
-}).then()
+}).then((response: AxiosResponse) => {
+    console.log('res',response);
+}).catch(err => {
+    console.log('err', err);
+})
